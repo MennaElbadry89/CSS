@@ -14,15 +14,15 @@
 }
 @font-face {
     font-family: 'Nunito';
-    src: url(/fonts/Nunito/Nunito-Regular.ttf) format('woff2');
+    src: url(../fonts/Nunito/Nunito-Regular.ttf) format('woff2');
 }
 @font-face {
     font-family: 'barlow-Regular';
-    src: url(/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf) format('woff2');
+    src: url(../fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf) format('woff2');
    }
    @font-face {
     font-family: 'barlow-Bold';
-    src: url(/fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf) format('woff2');
+    src: url(../fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf) format('woff2');
    }
 
 body{
@@ -390,7 +390,7 @@ nav .right-nav ul li a i:not(.fa-chevron-down){
 /* header */
 header{
 min-height: 120vh;
-background: linear-gradient( rgba(0,0,0,0.7) , rgba(0,0,0,0.8)) , url(/images/header.jpg) center no-repeat;
+background: linear-gradient( rgba(0,0,0,0.7) , rgba(0,0,0,0.8)) , url(../images/header.jpg) center no-repeat;
 background-size: cover;
 color: white;
 display: flex;
@@ -808,7 +808,7 @@ section .sec-title.withbtn .data b{
 
 }
 .works{
-    background: linear-gradient(rgba(0,0,0,.6) , rgba(0,0,0,.6)) , url(/images/works-img-1.jpg) center no-repeat;
+    background: linear-gradient(rgba(0,0,0,.6) , rgba(0,0,0,.6)) , url(../images/works-img-1.jpg) center no-repeat;
     background-size: cover;
 }
 .works .container{
@@ -1021,7 +1021,7 @@ section .sec-title.withbtn .data b{
 
  /*  start sec vedio*/
  .vedio{
-    background: linear-gradient(rgba(0,0,0,.7) , rgba(0,0,0,.7)) , url(/images/video-img-1.jpg) center no-repeat;
+    background: linear-gradient(rgba(0,0,0,.7) , rgba(0,0,0,.7)) , url(../images/video-img-1.jpg) center no-repeat;
     background-size: cover;
     /* position: relative;
     overflow: hidden; */
@@ -1256,7 +1256,7 @@ section .sec-title.withbtn .data b{
 
                               /* start sec Testimonials */
 .testimonials{
-    background: linear-gradient(#141414 , #141414) , url(/images/movie-shape-2.png) center no-repeat;
+    background: linear-gradient(#141414 , #141414) , url(../images/movie-shape-2.png) center no-repeat;
     background-size: cover;
     /* background-color: #141414; */
     color: white;
@@ -1389,7 +1389,7 @@ section .sec-title.withbtn .data b{
 
                               /* start sec news */
 .news{
-    background: linear-gradient(rgba(0,0,0,.8) , rgba(0,0,0,.8)) , url(/images/blog-bg-1.jpg) center no-repeat;
+    background: linear-gradient(rgba(0,0,0,.8) , rgba(0,0,0,.8)) , url(../images/blog-bg-1.jpg) center no-repeat;
     background-size: cover;
         color: white;
 }
@@ -1578,7 +1578,7 @@ footer .topfooter .card .Instagram div i{
     font-size: 25px;
     top: 50%;
     left: 50%;
-    transform: translate(-50% -50%);
+    transform: translate(-50% , -50%);
     opacity: 0;
 }
 footer .topfooter .card .Instagram div:hover img{
