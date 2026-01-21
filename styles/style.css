@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/*  المتغيرات variables */
+/*   variables */
 :root{
 
     --body-font : 'Nunito' , sans-serif;
@@ -26,7 +26,6 @@
    }
 
 body{
-    height: 8000px;
     font-family: var(--body-font);
 }
 /* start nav */
@@ -38,10 +37,15 @@ align-items: center;
 justify-content: space-between;
 padding: 0 30px;
 position: relative;
+top: 0;
+left: 0;
+width: 100%;
 z-index: 5;
 }
 nav .logo{
-
+    margin: 5px;
+    width: 50px;
+    
 }
 nav .right-nav{
 display: flex;
@@ -183,6 +187,7 @@ nav .right-nav ul li .dropdownmenu a:hover{
 }
 .sidebarmenulist{
     width: 450px;
+    height: 90vh;
     position: fixed;
     right: -450px;
     bottom: 0;
@@ -216,8 +221,8 @@ nav .right-nav ul li .dropdownmenu a:hover{
     display: none;
 }
 .sidebarmenulist .close{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: var(--main-color);
     color: white;
@@ -227,6 +232,8 @@ nav .right-nav ul li .dropdownmenu a:hover{
     justify-content: center;
     align-self: flex-end;
     position: relative;
+    right: 15px;
+    top: 15px;
     z-index: 1;
 }
 .sidebarmenulist .close::after{
@@ -307,6 +314,9 @@ nav .right-nav ul li a i:not(.fa-chevron-down){
 }
 
 @media (max-width : 992px) {
+    body{
+        padding-top: 0;
+    }
     nav .right-nav .process .fa-bars{
     display: block;
     }    
@@ -327,7 +337,7 @@ nav .right-nav ul li a i:not(.fa-chevron-down){
         transition: .5s;
         visibility: hidden;
     }
-    nav:hover .right-nav ul{
+    nav.hover .right-nav ul{
         opacity: 1;
         top: 100%;
         visibility: visible;
@@ -383,6 +393,18 @@ nav .right-nav ul li a i:not(.fa-chevron-down){
     nav .right-nav .process > .mood i.fa-moon{
         display: none;
     }
+    
+    @media (max-width: 768px) {
+    .sidebarmenulist{
+    width: 300px;
+    height: 90vh;
+    right: -300px;
+
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+  }
 }
 /* end nav */
 
@@ -436,7 +458,7 @@ header div:nth-of-type(1) p{
         width: auto;
         font-size: 12px;
     }}   
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     header div:nth-of-type(1) h1{
         width: auto;
         font-size: 50px;
@@ -444,7 +466,8 @@ header div:nth-of-type(1) p{
     header div:nth-of-type(1) p{
         width: auto;
         font-size: 10px;
-    }}
+    }
+}
 
 
 .btn{
@@ -506,7 +529,7 @@ header div:nth-of-type(2) img:hover{
     transform: scale(1.1);
 }
 
-@media (max-width: 306px) {
+@media (max-width: 320px) {
     header div:nth-of-type(2){
         flex-wrap: wrap;
     }
@@ -586,61 +609,48 @@ section .container .slider{
     gap: 20px;
 
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     section .container .slider .card:nth-of-type(2){
         display: none;
     }
+    section .sec-title .data b{
+    font-size: 30px;
+}
     
 }
-/* .servcies .container .slider .card:nth-of-type(1){
-    animation: slid 10s ease infinite ;   
 
-}
-.servcies .container .slider .card:nth-of-type(2){
-    animation: slid 10s 10s ease  infinite ;   
-
-}
-@keyframes slid {
-    0%{
-        transform: translateX(0);
-    }
-        50%{
-            transform: translateX(100%);
-        }
-            100%{
-                transform: translateX(00);
-}   
-} */
-
-/* section .container .slider:nth-of-type(2){
-    
-    width: 100%;
-    position: absolute;
-    right: 102%;
-    z-index: 1;
-} */
 section .container .slider .card{
     width: 100%;
+    height: 400px;  
     position: relative;
     overflow: hidden;
 
 }
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .servcies .container .slider .card{
-        width: 100%;
         visibility: visible;
     }
    
     .servcies .container .slider:nth-of-type(2){
         visibility: hidden;
     }
+    .servcies .container .slider .card .cardbody{
+    padding: 10px;
+
+}
 }
  
   
-section .container .slider .card img{
+section .container .slider .card .img{
     width: 100%;
+    height: 100%;
 }
-.servcies .container .slider .card div{
+section .container .slider .card .img img{
+    width: 100%;
+    height:100% ;
+    object-fit: fit;
+}
+.servcies .container .slider .card .cardbody{
     position: absolute;
     bottom: 0;
     display: flex;
@@ -651,17 +661,17 @@ section .container .slider .card img{
     color: white; 
     transition: .5s;
 }
-.servcies .container .slider .card:hover img{
+.servcies .container .slider .card:hover .img img{
     transform: scale(1.2);
 }
-.servcies .container .slider .card div b{
+.servcies .container .slider .card .cardbody b{
     font-family: var(--heading-Bold-font);
     font-size: 24px;
 }
-.servcies .container .slider .card:hover div b{
+.servcies .container .slider .card:hover .cardbody b{
     color: var(--main-color);
 }
-.servcies .container .slider .card div p{
+.servcies .container .slider .card .cardbody p{
     font-family: var(--body-font);
     font-size: 14px;
 }
@@ -803,42 +813,35 @@ section .sec-title.withoutsliderIcon .data{
 section .sec-title.withbtn{
     align-items: flex-end;
 }
-section .sec-title.withbtn .data b{
-    width: 500px;
-
+section .sec-title.withoutsliderIcon .data{
+    text-align: center;
 }
 .works{
+    /* width: 100%; */
     background: linear-gradient(rgba(0,0,0,.6) , rgba(0,0,0,.6)) , url(../images/works-img-1.jpg) center no-repeat;
     background-size: cover;
 }
 .works .container{
     display: grid;
-    grid-template-columns: repeat( 3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-
 }
 @media (max-width: 992px) {
     .works .container{
-        display: grid;
-        grid-template-columns: repeat( 2, 1fr);}
-    .works .container .card:nth-child(n+3){
-      display: none;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 575) {
+@media (max-width: 768px) {
     .works .container{
-        display: grid;
         grid-template-columns: 1fr;
     }
-    .works .container .card:nth-child(n+2) ,
-    .works .container .card:nth-child(n+3) {
-      display: none;
-    }
+    section .sec-title.withoutsliderIcon .data b{
+    font-size: 10px;
 }
-
+}
 .works .container .card{
     width: 100%;
-    height: 400px;
+    height: auto;
     transition: .5s;
     position: relative;
 }
@@ -886,6 +889,24 @@ section .sec-title.withbtn .data b{
     color: white;
     opacity: .7;
 
+}
+
+@media (max-width: 768px) {
+    .works .container .card{
+    width: 100%;
+
+}
+    .works .container .card .details{
+            padding: 10px;
+            bottom: 10px;
+    }
+    .works .container .card .details b{
+
+    font-size: 20px;
+    }
+    
+    
+    
 }
 
 /* end sec works */
@@ -972,11 +993,14 @@ section .sec-title.withbtn .data b{
 }
 .numbers .num_2{
     display: flex;
+     align-items: center;
+    justify-content: center;
 }
-.numbers .num_2 div{
+.numbers .num_2 div , .numbers .num_4 div{
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 0 20px;
 }
@@ -1005,7 +1029,7 @@ section .sec-title.withbtn .data b{
  }
  @keyframes border {
     100%{
-        top: 100%;
+        top: 70%;
     }
  }
  .numbers .num_2::after{
@@ -1016,6 +1040,14 @@ section .sec-title.withbtn .data b{
  }
  .numbers .num_3::after{
     animation-delay: 7s;
+ }
+
+ @media (max-width: 768px ) {
+    
+    .numbers b{
+    font-size: 40px;
+}
+   
  }
  /* end number */
 
@@ -1041,7 +1073,7 @@ section .sec-title.withbtn .data b{
     position: absolute;
     bottom: 50px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50% , -50%);
     width: 400px;
     line-height: 1.8;
     background-color: rgba(0, 0, 0, .7);
@@ -1057,7 +1089,6 @@ section .sec-title.withbtn .data b{
     color: var(--main-color);
     width: 100px;
     height: 100px;
-    /* border: 1px solid white; */
     border-radius: 50%;
     font-size: 25px;
     display: flex;
@@ -1066,7 +1097,7 @@ section .sec-title.withbtn .data b{
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50% , -50%);
     cursor: pointer;
 
 }
@@ -1107,12 +1138,23 @@ section .sec-title.withbtn .data b{
        
         grid-template-columns: repeat(2,1fr);  
 }}
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .vedio .container{
        
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3,1fr);   
 }
+.vedio .vedioslider > div:nth-of-type(1){
+    bottom: 0px;
+    width: 250px;
+    line-height: 1.25;
+    padding: 10px;
+}
+.vedio .vedioslider .play{
+    width: 50px;
+    height: 50px;
+}
+
 }
 
 .vedio .container .card{
@@ -1280,7 +1322,7 @@ section .sec-title.withbtn .data b{
     align-items: center;
     gap: 40px;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .testimonials .container .card{
         grid-template-columns: 1fr;
@@ -1329,9 +1371,6 @@ section .sec-title.withbtn .data b{
     color: #be9400;
     display: flex;
     gap: 5px;
-
-}
-.testimonials .container .card .details .stars i{
 
 }
 .testimonials .container .card .details > p{
