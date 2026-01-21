@@ -403,8 +403,29 @@ nav .right-nav ul li a i:not(.fa-chevron-down){
     gap: 10px;
     padding: 10px 20px;
 }
+.sidebarmenulist .about , .contact{
+    gap: 10px;
+}
+.sidebarmenulist b{
+    font-size: 18px;
+}
+.sidebarmenu .about p{
+    line-height: 1.5;
+}
+.sidebarmenu .contact div{
+ 
+    gap: 10px;
+}
+.sidebarmenu .contact div a{
+   
+    gap: 8px;
+}
 
-  }
+.sidebarmenu .social{
+    display: flex; 
+    gap: 15px;
+}
+}
 }
 /* end nav */
 
