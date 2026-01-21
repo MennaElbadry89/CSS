@@ -399,9 +399,12 @@ nav .right-nav ul li a i:not(.fa-chevron-down){
     width: 300px;
     height: 90vh;
     right: -300px;
-
+    bottom: 0;
     gap: 10px;
     padding: 10px 20px;
+}
+.sidebarmenu:active .sidebarmenulist{
+    right: 0;
 }
 .sidebarmenulist .about , .contact{
     gap: 10px;
